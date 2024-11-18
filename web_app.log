@@ -1,0 +1,9 @@
+{"level":"ERROR","time":"2024-11-03T21:39:00.938+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"dial tcp 127.0.0.1:13306: connect: connection refused"}
+{"level":"ERROR","time":"2024-11-03T21:39:31.131+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"dial tcp 127.0.0.1:13306: connect: connection refused"}
+{"level":"ERROR","time":"2024-11-03T21:39:36.622+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"dial tcp 127.0.0.1:13306: connect: connection refused"}
+{"level":"ERROR","time":"2024-11-03T21:40:23.641+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"Error 1045 (28000): Access denied for user 'cyan'@'localhost' (using password: YES)"}
+{"level":"ERROR","time":"2024-11-03T21:40:50.360+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"Error 1045 (28000): Access denied for user 'cyan'@'localhost' (using password: YES)"}
+{"level":"ERROR","time":"2024-11-03T21:41:33.976+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"Error 1045 (28000): Access denied for user 'cyan'@'localhost' (using password: YES)"}
+{"level":"ERROR","time":"2024-11-03T21:46:45.242+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"Error 1045 (28000): Access denied for user 'cyan'@'localhost' (using password: YES)"}
+{"level":"INFO","time":"2024-11-18T18:03:10.156+0800","caller":"Gin_Scaffold/main.go:76","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-18T18:03:10.158+0800","caller":"Gin_Scaffold/main.go:85","msg":"Server exiting"}
