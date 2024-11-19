@@ -7,3 +7,5 @@
 {"level":"ERROR","time":"2024-11-03T21:46:45.242+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"Error 1045 (28000): Access denied for user 'cyan'@'localhost' (using password: YES)"}
 {"level":"INFO","time":"2024-11-18T18:03:10.156+0800","caller":"Gin_Scaffold/main.go:76","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2024-11-18T18:03:10.158+0800","caller":"Gin_Scaffold/main.go:85","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-19T18:56:49.983+0800","caller":"Gin_Scaffold/main.go:76","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-19T18:56:49.987+0800","caller":"Gin_Scaffold/main.go:85","msg":"Server exiting"}

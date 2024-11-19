@@ -3,9 +3,9 @@ package main
 import (
 	"Gin_Scaffold/DAO/mysql"
 	"Gin_Scaffold/DAO/redis"
-	"Gin_Scaffold/config"
 	"Gin_Scaffold/logger"
 	"Gin_Scaffold/router"
+	"Gin_Scaffold/settings"
 	"context"
 	"errors"
 	"fmt"
@@ -23,8 +23,8 @@ import (
 
 func main() {
 	// 1. 加载配置
-	if err := config.InitConfig(); err != nil {
-		fmt.Printf("init config failed, err:%v\n", err)
+	if err := settings.InitConfig(); err != nil {
+		fmt.Printf("init settings failed, err:%v\n", err)
 		return
 	}
 
