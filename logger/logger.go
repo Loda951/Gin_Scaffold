@@ -1,6 +1,7 @@
 package logger
 
 import (
+	"Gin_Scaffold/settings"
 	"net"
 	"net/http"
 	"net/http/httputil"
@@ -20,12 +21,13 @@ import (
 var lg *zap.Logger
 
 // InitLogger 初始化Logger
-func InitLogger() (err error) {
+func InitLogger(config *settings.LogConfig) (err error) {
 	writeSyncer := getLogWriter(
-		viper.GetString("log.filename"),
-		viper.GetInt("log.max_size"),
-		viper.GetInt("log.max_backups"),
-		viper.GetInt("log.max_age"))
+		config.FileName,
+		config.MaxAge,
+		config.MaxSize,
+		config.MaxBackups,
+	)
 	encoder := getEncoder()
 	var logLevel = new(zapcore.Level)
 	err = logLevel.UnmarshalText([]byte(viper.GetString("log.level")))
