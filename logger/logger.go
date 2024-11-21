@@ -32,7 +32,16 @@ func InitLogger() (err error) {
 	if err != nil {
 		return err
 	}
-	core := zapcore.NewCore(encoder, writeSyncer, logLevel)
+
+	var core zapcore.Core
+	if viper.GetString("mode") == "dev" {
+		consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
+		core = zapcore.NewTee(
+			zapcore.NewCore(encoder, writeSyncer, logLevel),
+			zapcore.NewCore(consoleEncoder, zapcore.Lock(os.Stdout), zapcore.DebugLevel))
+	} else {
+		core = zapcore.NewCore(encoder, writeSyncer, logLevel)
+	}
 
 	lg = zap.New(core, zap.AddCaller())
 	// 替换zap包中全局的logger实例，后续在其他包中只需使用zap.L()调用即可
