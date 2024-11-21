@@ -36,7 +36,7 @@ func InitLogger(config *settings.LogConfig, mode string) (err error) {
 	}
 
 	var core zapcore.Core
-	if mode == "debug" {
+	if mode == "dev" {
 		consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
 		core = zapcore.NewTee(
 			zapcore.NewCore(encoder, writeSyncer, logLevel),
